@@ -1,0 +1,34 @@
+print("""
+hello everyone.
+here tannu somani
+from section F 
+date-27-10-2025
+project title-daily_calorie_tracker\n""")
+print("""hello everyone its a little project which tells ypu about your daily limit of calorific value and warn you if your daily limit crosses the limit you decided \n""")
+
+meal=[]
+calorie=[]
+x=int(input("enter the number of meals in digit you eat today"))
+for i in range(x):
+    meals=input("enter your meal name - ")
+    calories=float(input("enter your calories respectively to the meal -  "))
+    meal.append(meals)
+    calorie.append(calories) 
+print(f"Meal Names List: {meal}")
+print(f"Calorie List:    {calorie}")
+p=float(input("enter your daily calorie limit: "))
+s=sum(calorie)
+print("the total calories you eat today is:",s)
+a=s/x
+print("the average of your intake calorie is:",a)
+if p>s:
+    print("\n⚠️ You have exceeded your daily calorie limit!")
+elif p==s:
+    print("\n⚠️you are very near to cross your dail limit!")
+else:
+     print("\n✅ Great! You are within your daily calorie limit.")
+for i in range(x):
+    print(f"{meal[i]}\t\t{calorie[i]}")
+print("--------------------------------")
+print(f"Total:\t\t{s}")
+print(f"Average:\t{a:.2f}")
